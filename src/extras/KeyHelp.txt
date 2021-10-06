@@ -1,0 +1,80 @@
+Applications
+-------------
+Alt-f               Launch Terminal
+Alt-F               Launch Terminal in previous directory
+Alt-u               Raise/Hide Dropdown Terminal
+Alt-U               Push Dropdown Terminal into tiling
+Alt-g               Launch Browser
+Alt-G               Launch Secure Browser
+Alt-y               Launch Ranger (File Explorer)
+Alt-Y               Launch Nautilus (GUI File Explorer)
+Alt-o               Nixpkgs Search
+Alt-O               NixOS Options Search
+Alt-Caps-l          Dictionary
+Alt-Caps-t          Translate
+Alt-Caps-w          Wikipedia
+Alt-x               XMonad Command Prompt
+Alt-p               Launch Application Prompt
+Alt-s               Raise Spotify
+Alt-d               Launch Sound Control
+Alt-i               Launch IRC
+Alt-n               Take Note
+Alt-N               See Notes (~/docs/notes/note.md)
+Alt-[Grave,Esc,c]   Close Window
+
+Workspaces
+-----------
+Alt-[0..9]          Switch to Workspace N
+Alt-Shift-[0..9]    Send window to Workspace N
+Alt-[w,e,r]         Focus Screen [Left, Center, Right]
+Alt-[W,E,R]         Send window to Screen [Left, Center, Right]
+Alt-Period          Bring a Window
+
+Arrangement
+------------
+Alt-[j,Tab]         Focus Next window
+Alt-[k,Shift-Tab]   Focus Previous window
+Alt-J               Swap Focused window with Next window
+Alt-K               Swap Focused window with Previous window
+Alt-t               Retile    - Push window back into tiling
+Alt-T               Resize viewed windows to correct size
+Alt-Plus            More Windows in Master
+Alt-Minus           Fewer Windows in Master
+Alt-Enter           Set Focused window to Master
+Alt-h               Shrink Master Area
+Alt-l               Grow Master Area
+
+Layouts
+--------
+Alt-Space           Change to Next Layout
+Alt-Shift-Space     Change to Default Layout
+
+Utilities
+----------
+Alt-Q               Quit XMonad
+Alt-z               Recompile XMonad
+Alt-Z               Restart XMonad
+Alt-I               Show Window Info
+Alt-Shift-Period    Show Mouse Coordinates
+Alt-v               Paste selected text
+Print               Take Screenshot (~/scrns/...)
+Shift-Print         Take Screenshot of Selected Area
+
+Function Layer Mappings
+------------------------
+Caps-h              ←   Left Arrow
+Caps-j              ↓   Down Arrow
+Caps-k              ↑   Up Arrow
+Caps-l              →   Right Arrow
+Caps-H              Home
+Caps-L              End
+Caps-J              Page-Down
+Caps-K              Page-Up
+Caps-p              Print
+Caps-a              Mute Audio
+Caps-s              Lower Volume
+Caps-d              Raise Volume
+Caps-[0..9,-,=]     F1..F12
+Caps-'              `
+Caps-"              ~
+

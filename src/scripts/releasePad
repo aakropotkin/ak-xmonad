@@ -1,0 +1,22 @@
+#! /usr/bin/env bash
+
+# Loop through all windows and find "scratchpad" by WM_CLASS
+WIDS=($(wmctrl -l | awk '{print $1}'))
+for ID in "${WIDS[@]}"; do
+    if xprop -id $ID -f WM_CLASS 8s ':$0\n' WM_CLASS | grep -q scratchpad; then
+        WID=$ID
+        break
+    fi
+done
+
+# If there were no hits exit
+[[ -z "$WID" ]] && exit 0
+
+# Clear out any fields that contain "scratchpad"
+set_wm_class $WID urxvt URxvt
+xprop -id $WID -format WM_NAME 8s -set WM_NAME urxvt
+xprop -id $WID -format _NET_WM_NAME 8s -set _NET_WM_NAME urxvt
+xprop -id $WID -format WM_ICON_NAME 8s -set WM_ICON_NAME urxvt
+xprop -id $WID -format _NET_WM_ICON_NAME 8s -set _NET_WM_ICON_NAME urxvt
+
+# vim: ft=sh

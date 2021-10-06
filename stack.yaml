@@ -1,0 +1,6 @@
+nix:
+  enable:     true
+  pure:       true
+  shell-file: shell.nix
+
+resolver:     ghc-8.6.5

@@ -1,0 +1,25 @@
+if [[ ! -v HM_XPROFILE_SOURCED ]]; then
+  . ~/.xprofile
+fi
+unset HM_XPROFILE_SOURCED
+
+systemctl --user start hm-graphical-session.target
+
+
+/nix/store/6r7239vpxs7dbyw4fq37ci5wv4dkw3i7-pulse-volume.sh reset;
+/nix/store/6r7239vpxs7dbyw4fq37ci5wv4dkw3i7-pulse-volume.sh mute;
+
+
+#/nix/store/z968g7f3370fshqf1r21pkbbwbkx6wy3-xmonad-with-packages-8.6.4/bin/xmonad &
+
+xmonad &
+waitPID=$!
+
+
+systemctl --user stop graphical-session.target
+systemctl --user stop graphical-session-pre.target
+
+# Wait until the units actually stop.
+while [[ -n "$(systemctl --user --no-legend --state=deactivating list-units)" ]]; do
+  sleep 0.5
+done
